@@ -2,16 +2,6 @@ html {
   font-size: 16px;
 }
 
-.image-container {
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -67,7 +57,36 @@ header a:hover, a:active, a:visited, a:focus {
   transform: rotate(-8deg) scale(1.04);
 }
 
-/* Jumbotron */
+#videos {
+  font-size: 69px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #ccc;
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* home.html */
+
 
 .jumbotron {
   display: flex;
@@ -96,23 +115,30 @@ header a:hover, a:active, a:visited, a:focus {
   color: #fff;
 }
 
-#highlights {
-  font-size: 69px;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  text-shadow: 2px 2px #ccc;
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fff;
+  text-shadow: none;
+  background-color: #f00;
+  transition-property: background-color;
+  transition-duration: 0.25s;
 }
 
-#bonus {
-  font-size: 69px;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 40px;
-  text-shadow: 2px 2px #ccc;
+.btn.btn-primary:hover {
+  color: #fff;
+  background-color: #f55;
+  transform: scale(1.04);
+  opacity: 0.97;
 }
 
-/* Blog Post */
+.col-sm-6 {
+  margin: 0 0 30px;
+}
+
+
+/* about.html */
+
 
 #blog {
   
@@ -137,6 +163,16 @@ header a:hover, a:active, a:visited, a:focus {
   margin-bottom: 3.5%;
 }
 
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .post h2 {
   color: #555;
   font-size: 1.875rem;
@@ -153,71 +189,15 @@ header a:hover, a:active, a:visited, a:focus {
   margin-bottom: 3.2rem;
 }
 
-.post .opening-line {
-  margin-bottom: 1.5rem;
-  color: black;
-  font-weight: bold;
-}
-
 .post .image-container {
   max-width: 100%;
 }
 
-.post img{
+.post img {
   border: 2px solid #555;
 }
 
-.post audio{
+.post audio {
   margin-bottom: 1.5rem;
-}
-
-.btn.btn-primary {
-  border-radius: 2px;
-  border: 0px;
-  color: #fff;
-  text-shadow: none;
-  background-color: #f00;
-  transition-property: background-color scale;
-  transition-duration: 0.25s;
-}
-
-.btn.btn-primary:hover {
-  color: #fff;
-  background-color: #f55;
-  transform: scale(1.04);
-  opacity: 0.97;
-}
-
-.btn-secondary {
-  background-color: #E8DFE0;
-  color: #fff;
-  margin: 0 0 30px;
-}
-
-section .row img {
-  margin: 0 0 30px;
-  width: 100%;
-}
-
-.col-sm-6 {
-  margin: 0 0 30px;
-}
-
-footer {
-  font-size: 12px;
-  padding: 20px 0;
-}
-
-footer .col-sm-8 {
-  display: flex;
-  justify-content: flex-end;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer li img {
-  width: 32px;
-  height: 32px;
+  width: 75%;
 }
