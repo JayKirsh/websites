@@ -198,9 +198,15 @@ footer li img {
   border: 2px solid #555;
 }
 
+
 .post audio {
   margin-bottom: 1.5rem;
-  width: 75%;
+}
+
+@media (min-width: 600px) {
+    .post audio {
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
