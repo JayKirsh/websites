@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Ethlial About</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>html5 audio player on iPhone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 33px);
+}  
+</style>
 </head>
-
 <body>
-
-      <audio controls preload="auto">
-        <source src="../audio/Prelude.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
-      <p>Hello</p>
-
-      <audio controls preload="auto">
-        <source src="../audio/Feux follets.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      
-      <p>Hello</p>
-  
-      <audio controls preload="auto">
-        <source src="../audio/From the Shadows.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
-      <p>Hello</p>
-     
-      <audio controls preload="auto">
-        <source src="../audio/The Sinking Old Sanctuary.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
-      <p>Hello</p>
-
+<audio controls preload="auto" style="width:100%;">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio><br />
 </body>
 </html>
