@@ -207,4 +207,5 @@ footer li img {
   filter: sepia(80%) saturate(50%) grayscale(70%) contrast(99%) invert(10%) opacity(85%);
   width: 400px;
   height: 40px;
+  min-height: 40px;
 }
