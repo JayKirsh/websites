@@ -211,6 +211,6 @@ footer li img {
 
 @media only screen and (max-width: 600px) {
     .post audio {
-        height: 30px;
+        min-height: 30px;
     }
 }
