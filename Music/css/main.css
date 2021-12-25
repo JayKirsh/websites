@@ -194,6 +194,10 @@ footer li img {
   max-width: 100%;
 }
 
+.post .audio-container {
+  position: relative
+}
+
 .post img {
   border: 2px solid #555;
 }
