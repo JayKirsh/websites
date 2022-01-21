@@ -1,6 +1,6 @@
 ## 00 Portfolio
 
-An description of who I am, my education, and my website building experience.
+A description of who I am, my education, and my website building experience.
 
 [link](https://htmlpreview.github.io/?https://github.com/JayKirsh/websites/blob/main/Highlights/00_Portfolio/html/index.html)
 
