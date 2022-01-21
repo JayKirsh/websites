@@ -1,6 +1,6 @@
 # websites
 
-A respository to display my web dev endeavours.
+My web dev endeavours.
 
 ## Highlights
 
