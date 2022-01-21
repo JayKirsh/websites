@@ -38,7 +38,7 @@ Exploring a variety of fonts and backup fonts.
 
 Using flexbox display to create dynamic spacing between elements depending on the window.
 
-[link](https://htmlpreview.github.io/?https://github.com/JayKirsh/websites/blob/main/Projects/HTML&CSS/07_FlexBox/index.html)
+[link](https://htmlpreview.github.io/?https://github.com/JayKirsh/websites/blob/main/Projects/HTML&CSS/07_Flexbox/index.html)
 
 ## 08 FlexSpecs
 
