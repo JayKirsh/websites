@@ -4,8 +4,8 @@ My web dev endeavours.
 
 ## Highlights
 
-Fully finished websites that demonstrate a variety of web developments skillsets.
+Fully finished websites.
 
 ## Projects
 
-Anywhere from fleshed out websites to simple sketches.
+Anywhere from fully fleshed out ideas to simple sketches.
