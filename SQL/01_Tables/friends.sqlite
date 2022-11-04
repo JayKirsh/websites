@@ -1,0 +1,62 @@
+/*
+Create a table named friends with three columns:
+  id that stores INTEGER
+  name that stores TEXT
+  birthday that stores DATE
+*/
+
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+/*Add Ororo Munroe who has a birthday of May 30th, 1940*/
+
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Ororo Munroe', '1940-05-30');
+
+/*Verify that Ororo has been added*/
+
+SELECT * FROM friends;
+
+/*Add two of your friends to the table*/
+
+INSERT INTO friends (id, name, birthday)
+VALUES
+  (2, 'Jordan Kirchner', '1995-06-05'),
+  (3, 'Muskan Hans', '1996-04-06');
+
+/*Update Ororo Munroe's name to Storm*/
+
+UPDATE friends
+SET name = 'Storm'
+WHERE name = 'Ororo Munroe';
+
+/*Add an email column*/
+
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+/*Update the email address for everyone. Storm's is storm@codecademy.com*/
+
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE name = 'Storm';
+
+UPDATE friends
+SET email = 'jordankirchner04@hotmail.com'
+WHERE name = 'Jordan Kirchner';
+
+UPDATE friends
+SET email = 'MuskanHans@uvic.ca'
+WHERE name = 'Muskan Hans';
+
+/*Remove Storm*/
+
+DELETE FROM friends
+WHERE name = 'Storm';
+
+/*The final table*/
+
+SELECT * FROM friends;

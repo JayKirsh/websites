@@ -1,0 +1,64 @@
+/*Select everything from the table*/
+
+SELECT *
+FROM nomnom;
+
+/*Select the distinct neighborhoods*/
+
+SELECT DISTINCT neighborhood
+FROM nomnom;
+
+/*Select the discinct cuisine types*/
+
+SELECT DISTINCT cuisine
+FROM nomnom;
+
+/*Select the Chinese restaurants*/
+
+SELECT * FROM nomnom
+WHERE cuisine = 'Chinese';
+
+/*Select the restaurants with a rating of 4 and above*/
+
+SELECT * FROM nomnom
+WHERE review >= 4;
+
+/*Select all the restaurants that are Italian and $$$*/
+
+SELECT * FROM nomnom
+WHERE cuisine = 'Italian' AND price = '$$$';
+
+/*Select the restaurants that contain the word 'meatball'*/
+
+SELECT * FROM nomnom
+WHERE name LIKE '%meatball%';
+
+/*Select the restaurants in Midtown, Downtown, or Chinatown*/
+
+SELECT * FROM nomnom
+WHERE neighborhood = 'Midtown'
+  OR neighborhood = 'Downtown'
+  OR neighborhood = 'Chinatown';
+
+/*Select all the null health grade restaurants*/
+
+SELECT * FROM nomnom
+WHERE health IS NULL;
+
+/*Select the Top 10 restaurants based on reviews*/
+
+SELECT * FROM nomnom
+ORDER BY review DESC
+LIMIT 10;
+
+/*Select the table and give it a simpler rating system*/
+
+SELECT name,
+  CASE
+   WHEN review > 4.5 THEN 'Extraordinary'
+   WHEN review > 4 THEN 'Excellent'
+   WHEN review > 3 THEN 'Good'
+   WHEN review > 2 THEN 'Fair'
+   ELSE 'Poor' 
+  END AS 'Review'
+FROM nomnom;

@@ -1,0 +1,80 @@
+/*Select the table*/
+
+SELECT *
+FROM startups;
+
+/*Select the total number of companies*/
+
+SELECT COUNT(name) AS 'Number of Companies'
+FROM startups;
+
+/*Select the total value of all companies*/
+
+SELECT SUM(valuation) AS 'Valuation Sum'
+FROM startups;
+
+/*Select the highest amount raised by a startup*/
+
+SELECT MAX(raised) AS 'Max Raised'
+FROM startups;
+
+/*Select the highest amount raised by a startup during the 'Seed' stage*/
+
+SELECT MAX(raised) AS 'Seed Max Raised'
+FROM startups
+WHERE stage = 'Seed';
+
+/*Select the year of the oldest company*/
+
+SELECT MIN(founded) AS 'Oldest'
+FROM startups;
+
+/*Select the average valuation*/
+
+SELECT AVG(valuation) AS 'Valuation'
+FROM startups;
+
+/*Select the average valuation in each category*/
+
+SELECT category, AVG(valuation) AS 'Average Valuation'
+FROM startups
+GROUP BY category;
+
+/*Select the average valuation in each category rounded to two decimal places*/
+
+SELECT category, ROUND(AVG(valuation), 2) AS 'Average Valuation'
+FROM startups
+GROUP BY category;
+
+/*Select the average valuation in each category rounded to two decimal places and order the list from highest averages to lowest*/
+
+SELECT category, ROUND(AVG(valuation), 2) AS 'Average Valuation'
+FROM startups
+GROUP BY category
+ORDER BY 2 DESC;
+
+/*Select the name of each category with the total number of companies that belong to it*/
+
+SELECT category, COUNT(name)
+FROM startups
+GROUP BY category;
+
+/*Filter the result to only include categories that have more than three companies in them*/
+
+SELECT category, COUNT(name) as 'Count'
+FROM startups
+GROUP BY category
+HAVING Count > 3;
+
+/*Select the average size of a startup for each location*/
+
+SELECT location, AVG(employees) as 'Average'
+FROM startups
+GROUP BY location;
+
+/*Select the average size of a startup for each location with average sizes above 500*/
+
+SELECT location, AVG(employees) as 'Average'
+FROM startups
+GROUP BY location
+HAVING Average > 500;

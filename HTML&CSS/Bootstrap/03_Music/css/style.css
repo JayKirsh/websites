@@ -1,0 +1,214 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-image: url(../pics/notes.jpg);
+	background-color: rgba(255,255,255,0.95);
+	background-blend-mode: lighten;
+}
+
+header {
+  padding: 20px 0;
+	background-image: none;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+header a {
+  color: #000;
+}
+
+header a:hover {
+  color: #777;
+}
+
+header a:visited {
+  color: #000;
+}
+
+header a:hover, a:active, a:visited, a:focus {
+    text-decoration:none;
+}
+
+.container img{
+  margin-left: 6px;
+  transition: all 0.75s ease-out;
+}
+
+.container img:hover{
+  transform: rotate(-8deg) scale(1.04);
+}
+
+#videos {
+  font-size: 69px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #ccc;
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* index.html */
+
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05)), url("../pics/music.jpg");
+  background-size: cover;
+  color: #fff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000;
+}
+
+.jumbotron:hover{
+  background-blend-mode: saturation;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fff;
+  text-shadow: none;
+  background-color: #f00;
+  transition-property: background-color, transform;
+  transition-duration: 0.35s;
+}
+
+.btn.btn-primary:hover {
+  color: #fff;
+  background-color: #f55;
+  transform: scale(1.04);
+  opacity: 0.97;
+}
+
+.col-sm-6 {
+  margin: 0 0 30px;
+}
+
+
+/* about.html */
+
+
+#blog {
+  
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86%;
+  min-width: 800px;
+}
+
+#blog .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  color: #444;
+  width: 52%;
+  margin-bottom: 3.5%;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post h2 {
+  color: #555;
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.post h3 {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.post p {
+  margin-bottom: 3.2rem;
+}
+
+.post .image-container {
+  max-width: 100%;
+}
+
+.post .audio-container {
+  position: relative
+}
+
+.post img {
+  border: 2px solid #555;
+}
+
+.post audio {
+  margin-bottom: 1.5rem;
+  filter: sepia(80%) saturate(50%) grayscale(70%) contrast(99%) invert(10%) opacity(85%);
+  width: 400px;
+  height: 40px;
+  min-height: 40px;
+}

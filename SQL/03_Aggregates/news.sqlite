@@ -1,0 +1,64 @@
+/*Select the most popular stories*/
+
+SELECT title, score
+FROM hacker_news
+ORDER BY score DESC
+LIMIT 5;
+
+/*Select the total score of all stories*/
+
+SELECT SUM(score) as 'Score Total'
+FROM hacker_news;
+
+/*Select the individual users who have gotten combined scores of more than 200*/
+
+SELECT user, SUM(score) as 'UserScore'
+FROM hacker_news
+GROUP BY user
+HAVING UserScore > 200
+ORDER BY 2 DESC;
+
+/*Select the ratio of top user scores to the total user score*/
+
+SELECT (507 + 309 + 304 + 282) / 6366.0;
+
+/*Select amount of times that each user that has posted https://www.youtube.com/watch?v=dQw4w9WgXcQ*/
+
+SELECT user, COUNT(url) AS 'TrollCount' FROM (SELECT user, url
+FROM hacker_news
+WHERE url ='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+GROUP BY user
+ORDER BY TrollCount DESC;
+
+/*Which of GitHub, Medium, or New York Times feeds Hacker News the most?*/
+
+SELECT CASE
+  WHEN url LIKE '%github.com%' THEN 'GitHub'
+  WHEN url LIKE '%medium.com%' THEN 'Medium'
+  WHEN url LIKE '%nytimes.com%' THEN 'New York Times'
+  ELSE 'WhoCares'
+  END AS 'Source',
+  COUNT(*) AS 'Site Count'
+FROM hacker_news
+GROUP BY Source;
+
+/*Select 10 timestamps*/
+
+SELECT timestamp
+FROM hacker_news
+LIMIT 10;
+
+/*Select 20 timestamps using the strftime function*/
+
+SELECT timestamp, strftime('%H', timestamp) AS 'Hour'
+FROM hacker_news
+GROUP BY 1
+LIMIT 20;
+
+/*Select the average score and count of stories for each hour*/
+
+SELECT strftime('%H', timestamp) AS 'Hour', ROUND(AVG(score), 2) AS 'AverageScore', COUNT(*) AS 'Count'
+FROM hacker_news
+WHERE Hour IS NOT NULL
+GROUP BY 1
+ORDER BY 1;
